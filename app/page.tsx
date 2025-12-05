@@ -1,4 +1,4 @@
-// app/page.tsx
+"use client";
 import Image from "next/image";
 
 export default function Home() {
@@ -24,18 +24,10 @@ export default function Home() {
           </div>
 
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#ai" className="hover:text-white">
-              Wovo AI
-            </a>
-            <a href="#agency" className="hover:text-white">
-              Agency
-            </a>
-            <a href="#proof" className="hover:text-white">
-              Results
-            </a>
-            <a href="#contact" className="hover:text-white">
-              Contact
-            </a>
+            <a href="#ai" className="hover:text-white">Wovo AI</a>
+            <a href="#agency" className="hover:text-white">Agency</a>
+            <a href="#proof" className="hover:text-white">Results</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
             <a
               href="#ai"
               className="rounded-full bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-950 shadow-md shadow-emerald-400/30 hover:bg-emerald-100"
@@ -45,7 +37,7 @@ export default function Home() {
           </nav>
         </header>
 
-        {/* HERO */}
+        {/* HERO SECTION */}
         <section className="grid gap-12 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:items-center">
           {/* Hero text */}
           <div>
@@ -64,7 +56,7 @@ export default function Home() {
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
               Wovo turns your website, menu, and photos into daily content,
               smart ads, and Google updates automatically — and when you want
-              the&nbsp;{" "}
+              the{" "}
               <span className="font-semibold text-emerald-200">
                 serious done-for-you help
               </span>
@@ -87,41 +79,18 @@ export default function Home() {
             </div>
 
             <p className="mt-4 text-xs text-slate-400">
-              No contracts. Start with AI, upgrade to full-service whenever
-              you’re ready.
+              No contracts. Start with AI, upgrade to full-service whenever you're ready.
             </p>
-
-            <div className="mt-6 flex flex-wrap items-center gap-6 text-xs text-slate-400">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/20 text-[10px]">
-                    🥩
-                  </span>
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-fuchsia-500/20 text-[10px]">
-                    🍕
-                  </span>
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-sky-500/20 text-[10px]">
-                    💈
-                  </span>
-                </div>
-                <span>Local restaurants, shops & salons love us.</span>
-              </div>
-              <div className="h-4 w-px bg-slate-700" />
-              <div>Built in Tennessee • Powered by AI</div>
-            </div>
           </div>
 
-          {/* Mascot side */}
+          {/* Mascot */}
           <div className="relative mx-auto flex w-full max-w-sm items-center justify-center">
-            {/* Gradient blob */}
             <div className="absolute inset-0 translate-y-6 rounded-[40px] bg-gradient-to-br from-emerald-400/40 via-fuchsia-500/30 to-sky-500/30 blur-3xl" />
 
             <div className="relative flex w-full flex-col items-center gap-4 rounded-[32px] border border-slate-800 bg-slate-900/60 px-6 pb-6 pt-7 shadow-2xl shadow-emerald-500/25 backdrop-blur">
-              {/* Mascot image placeholder */}
               <div className="relative flex h-40 w-40 items-center justify-center">
                 <div className="absolute inset-4 rounded-full bg-gradient-to-br from-slate-50 to-slate-200" />
                 <div className="relative flex h-28 w-28 flex-col items-center justify-center">
-                  {/* Face */}
                   <div className="flex h-14 w-24 items-center justify-center">
                     <div className="flex h-10 w-full items-center justify-between px-4">
                       <div className="h-4 w-4 rounded-full bg-slate-900" />
@@ -129,7 +98,6 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="h-4 w-10 rounded-full border-b-4 border-slate-900/80" />
-                  {/* Glow ring */}
                   <div className="mt-3 h-1.5 w-16 rounded-full bg-gradient-to-r from-emerald-400/60 via-sky-400/60 to-fuchsia-400/60 blur-sm" />
                 </div>
               </div>
@@ -142,253 +110,11 @@ export default function Home() {
                   Your AI marketing buddy
                 </p>
                 <p className="mt-2 text-xs text-slate-400">
-                  Learns your brand, writes your posts, and nudges customers
-                  when they’re ready to buy.
-                </p>
-              </div>
-
-              {/* Status pill */}
-              <div className="mt-2 flex w-full items-center justify-between rounded-2xl bg-slate-900/80 px-4 py-3 text-xs">
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                  <span className="font-medium text-slate-100">
-                    Running 24/7
-                  </span>
-                </div>
-                <span className="text-[11px] text-slate-400">
-                  Drafting posts, replying to reviews…
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WOVO AI SECTION */}
-        <section id="ai" className="space-y-6">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              Wovo AI: small-business marketing on autopilot.
-            </h2>
-            <p className="mt-3 text-sm text-slate-300 sm:text-base">
-              Paste your website, menu, or socials and Wovi learns your
-              brand’s voice. Then it writes posts, ads, captions, emails and
-              more — ready for you to copy, tweak, or schedule.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
-                Free Plan
-              </p>
-              <p className="mt-2 text-lg font-semibold text-white">
-                Try Wovo AI with a small watermark
-              </p>
-              <p className="mt-2 text-sm text-slate-300">
-                Generate content for your business for free. A tiny “Made with
-                Wovo” tag helps spread the word.
-              </p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
-                <li>• X credits per month to test things out</li>
-                <li>• Social posts, captions & ideas</li>
-                <li>• Works great for restaurants & local shops</li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-emerald-500/60 bg-slate-900 p-5 shadow-lg shadow-emerald-400/40">
-              <div className="flex items-center justify-between">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
-                  Pro — $9.99/mo
-                </p>
-                <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-medium text-emerald-200">
-                  Most popular
-                </span>
-              </div>
-              <p className="mt-2 text-lg font-semibold text-white">
-                Remove watermark. Look fully pro.
-              </p>
-              <p className="mt-2 text-sm text-slate-300">
-                All of Wovo’s features, no watermark on your content, plus
-                higher limits so you can post more often.
-              </p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
-                <li>• No watermark on any outputs</li>
-                <li>• More monthly credits</li>
-                <li>• Great for growing brands</li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-fuchsia-300">
-                Unlimited — $19.99/mo
-              </p>
-              <p className="mt-2 text-lg font-semibold text-white">
-                Unlimited credits for heavy users
-              </p>
-              <p className="mt-2 text-sm text-slate-300">
-                For agencies, creators, and brands that want to go all-in
-                with AI and never worry about usage.
-              </p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
-                <li>• Unlimited generations*</li>
-                <li>• No watermark, ever</li>
-                <li>• Priority generation speeds</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* AGENCY VS AI SPLIT */}
-        <section
-          id="agency"
-          className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)]"
-        >
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
-              Done-for-you Agency
-            </p>
-            <h3 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
-              Too busy to learn AI? We’ll just run it for you.
-            </h3>
-            <p className="mt-3 text-sm text-slate-300">
-              For serious businesses that want everything handled: daily posts,
-              Google updates, website changes, events, photos and more. This is
-              the same hands-on service we use for our Tennessee clients.
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              <li>• Daily social posts on Facebook, Instagram & more</li>
-              <li>• Google Business profile updates & review replies</li>
-              <li>• Website edits, promos, menus, seasonal campaigns</li>
-              <li>• Ideas for events & promotions to drive real traffic</li>
-            </ul>
-            <p className="mt-4 text-sm font-semibold text-emerald-200">
-              Starting around $300/month — month-to-month, no contracts.
-            </p>
-            <a
-              href="#contact"
-              className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-md shadow-emerald-400/30 hover:bg-emerald-100"
-            >
-              Talk to Wovo Media
-            </a>
-          </div>
-
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6 sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300">
-              Self-serve AI
-            </p>
-            <h3 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
-              Want to do it yourself? Wovi’s got your back.
-            </h3>
-            <p className="mt-3 text-sm text-slate-300">
-              Use Wovo AI like a little creative teammate. Tell it what
-              you’re planning, and it turns that into content, ads and
-              campaigns in your voice.
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              <li>• Ask it for daily post ideas</li>
-              <li>• Generate offers, captions & emails in seconds</li>
-              <li>• Keep everything on-brand for your business</li>
-              <li>• Upgrade anytime to unlock more power</li>
-            </ul>
-            <a
-              href="#ai"
-              className="mt-5 inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 px-6 py-2.5 text-sm font-semibold text-slate-100 hover:border-emerald-400/60"
-            >
-              Start with AI free
-            </a>
-          </div>
-        </section>
-
-        {/* PROOF / RESULTS */}
-        <section id="proof" className="space-y-5">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              Real results for real local businesses.
-            </h2>
-            <p className="mt-3 text-sm text-slate-300 sm:text-base">
-              Plug in your own numbers here later — Campbell Station, local
-              restaurants, and shops that saw big jumps in views, calls, and
-              bookings.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <p className="text-sm font-semibold text-white">
-                +X% website views
-              </p>
-              <p className="mt-1 text-xs text-slate-400">
-                After consistent social + Google posts.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <p className="text-sm font-semibold text-white">
-                +Y new followers
-              </p>
-              <p className="mt-1 text-xs text-slate-400">
-                For a single local restaurant in a few months.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <p className="text-sm font-semibold text-white">
-                Zx more engagement
-              </p>
-              <p className="mt-1 text-xs text-slate-400">
-                When we started pairing Wovo AI with done-for-you posting.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CONTACT / FOOTER */}
-        <section
-          id="contact"
-          className="mt-4 rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-7"
-        >
-          <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center">
-            <div>
-              <h2 className="text-xl font-semibold text-white sm:text-2xl">
-                Ready to plug Wovo into your business?
-              </h2>
-              <p className="mt-3 text-sm text-slate-300 sm:text-base">
-                Text or call and tell us what kind of business you run. We’ll
-                help you decide if you just need Wovo AI or you’re ready for
-                the full Wovo Media treatment.
-              </p>
-              <div className="mt-4 space-y-1 text-sm text-slate-200">
-                <p>
-                  <span className="font-semibold text-emerald-300">
-                    Text:
-                  </span>{" "}
-                  931-458-3255
-                </p>
-                <p>
-                  <span className="font-semibold text-emerald-300">
-                    Email:
-                  </span>{" "}
-                  support@wovomedia.com
+                  Learns your brand, writes your posts, and nudges customers when they’re ready to buy.
                 </p>
               </div>
             </div>
-            <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-950/70 p-4 text-xs text-slate-300">
-              <p className="text-[11px] uppercase tracking-[0.22em] text-emerald-300">
-                How people use Wovo
-              </p>
-              <ul className="space-y-1.5">
-                <li>• Restaurant owners who just want more butts in seats</li>
-                <li>• Local shops that need someone to “just post every day”</li>
-                <li>• Creators/marketers who want an AI sidekick</li>
-              </ul>
-              <p className="pt-1 text-[11px] text-slate-500">
-                Start with AI. Upgrade to the agency when you’re ready to let
-                go of the wheel.
-              </p>
-            </div>
           </div>
-          <p className="mt-6 text-center text-[11px] text-slate-500">
-            © {new Date().getFullYear()} Wovo Media. Built with ❤️ in
-            Tennessee.
-          </p>
         </section>
       </div>
     </main>
