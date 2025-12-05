@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { MouseEvent } from "react";
 
 export default function Home() {
-  // mouse tracking for the mascot
+  // mouse tracking for mascot / hero
   const [eyePos, setEyePos] = useState({ x: 0.5, y: 0.5 });
 
   const handleHeroMove = (e: MouseEvent<HTMLElement>) => {
@@ -22,29 +22,29 @@ export default function Home() {
   };
 
   // convert eyePos into pixel offsets + tilt
-  const eyeOffsetX = (eyePos.x - 0.5) * 16; // left/right
-  const eyeOffsetY = (eyePos.y - 0.5) * 10; // up/down
+  const eyeOffsetX = (eyePos.x - 0.5) * 18;
+  const eyeOffsetY = (eyePos.y - 0.5) * 12;
   const tiltX = (0.5 - eyePos.y) * 10;
   const tiltY = (eyePos.x - 0.5) * 16;
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       {/* Top gradient glow */}
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-0 h-[420px] bg-gradient-to-b from-emerald-400/30 via-fuchsia-500/20 to-transparent blur-3xl" />
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-0 h-[420px] bg-gradient-to-b from-emerald-400/40 via-emerald-500/20 to-transparent blur-3xl" />
 
       {/* Page wrapper */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-20 px-4 pb-20 pt-10 sm:px-6 lg:px-8 lg:pt-16">
         {/* NAV */}
         <header className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-fuchsia-500 shadow-lg shadow-emerald-500/40">
+            <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-lime-400 shadow-lg shadow-emerald-500/40">
               <span className="text-lg font-black tracking-tight">W</span>
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-semibold uppercase tracking-[0.14em] text-emerald-300">
                 Wovo
               </span>
-              <span className="text-sm text-slate-300">AI & Media</span>
+              <span className="text-sm text-slate-300">AI &amp; Media</span>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function Home() {
           </nav>
         </header>
 
-        {/* HERO (now tracks mouse over whole hero area) */}
+        {/* HERO – mouse move over whole section */}
         <section
           className="grid gap-12 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:items-center"
           onMouseMove={handleHeroMove}
@@ -85,7 +85,7 @@ export default function Home() {
 
             <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Cute little AI that
-              <span className="block bg-gradient-to-r from-emerald-300 via-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-emerald-300 via-lime-300 to-sky-300 bg-clip-text text-transparent">
                 runs your marketing for you.
               </span>
             </h1>
@@ -103,7 +103,7 @@ export default function Home() {
             <div className="mt-7 flex flex-wrap gap-4">
               <a
                 href="#ai"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-400 to-fuchsia-500 px-7 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 hover:brightness-110"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-400 via-lime-400 to-sky-400 px-7 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 hover:brightness-110"
               >
                 Try Wovo AI Free
               </a>
@@ -117,7 +117,7 @@ export default function Home() {
 
             <p className="mt-4 text-xs text-slate-400">
               No contracts. Start with AI, upgrade to full-service whenever
-              you’re ready.
+              you&apos;re ready.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-6 text-xs text-slate-400">
@@ -133,36 +133,39 @@ export default function Home() {
                     💈
                   </span>
                 </div>
-                <span>Local restaurants, shops & salons love us.</span>
+                <span>Local restaurants, shops &amp; salons love us.</span>
               </div>
               <div className="h-4 w-px bg-slate-700" />
               <div>Built in Tennessee • Powered by AI</div>
             </div>
           </div>
 
-          {/* BIG ROUND 3D MASCOT */}
+          {/* BIG ROUND 3D WOVI */}
           <div className="relative mx-auto flex w-full max-w-sm items-center justify-center">
             {/* Glow behind */}
-            <div className="absolute inset-0 translate-y-6 rounded-[40px] bg-gradient-to-br from-emerald-400/45 via-fuchsia-500/35 to-sky-500/35 blur-3xl" />
+            <div className="absolute inset-0 translate-y-7 rounded-[46px] bg-[radial-gradient(circle_at_top,_#22c55e55,_transparent_60%),radial-gradient(circle_at_bottom,_#0ea5e955,_transparent_60%)] blur-3xl" />
 
             {/* Card that tilts */}
             <div
-              className="relative flex w-full flex-col items-center gap-4 rounded-[32px] border border-slate-800 bg-slate-900/70 px-6 pb-7 pt-7 shadow-2xl shadow-emerald-500/25 backdrop-blur"
+              className="relative flex w-full flex-col items-center gap-4 rounded-[36px] border border-emerald-500/40 bg-slate-950/80 px-6 pb-7 pt-7 shadow-[0_26px_60px_rgba(16,185,129,0.45)] backdrop-blur"
               style={{
                 transform: `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`,
                 transformStyle: "preserve-3d",
                 transition: "transform 100ms ease-out",
               }}
             >
-              {/* Circle mascot */}
-              <div className="relative flex h-48 w-48 flex-col items-center justify-center">
-                {/* main circle */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-slate-50 to-slate-300 shadow-[0_18px_40px_rgba(15,23,42,0.65)]" />
+              {/* 3D blob mascot */}
+              <div className="relative flex h-64 w-64 flex-col items-center justify-center">
+                {/* base body */}
+                <div className="absolute inset-x-4 top-4 bottom-6 rounded-[999px] bg-gradient-to-b from-slate-50 to-slate-300 shadow-[0_24px_50px_rgba(15,23,42,0.8)]" />
 
-                {/* face layer */}
-                <div className="relative mt-3 flex h-24 w-28 flex-col items-center justify-start">
-                  {/* eyes row */}
-                  <div className="flex h-14 w-full items-center justify-between px-6">
+                {/* green rim light */}
+                <div className="pointer-events-none absolute inset-x-6 top-6 bottom-10 rounded-[999px] border border-emerald-300/30 shadow-[0_-12px_30px_rgba(74,222,128,0.55),0_18px_30px_rgba(15,23,42,1)]" />
+
+                {/* face area */}
+                <div className="relative mt-8 flex h-28 w-32 flex-col items-center justify-start">
+                  <div className="flex h-16 w-full items-center justify-between px-6">
+                    {/* eyes */}
                     <div
                       className="h-5 w-5 rounded-full bg-slate-900"
                       style={{
@@ -178,21 +181,26 @@ export default function Home() {
                       }}
                     />
                   </div>
-
                   {/* smile */}
-                  <div className="mt-0.5 flex items-center justify-center">
-                    <div className="h-4 w-12 rounded-full border-b-[5px] border-slate-900/80" />
+                  <div className="mt-1 flex items-center justify-center">
+                    <div className="h-4 w-14 rounded-full border-b-[5px] border-slate-900/80" />
                   </div>
                 </div>
 
-                {/* tiny feet to hint body */}
-                <div className="absolute bottom-5 flex items-end justify-center gap-4">
-                  <div className="h-7 w-3 rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-md shadow-slate-900/40" />
-                  <div className="h-7 w-3 rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-md shadow-slate-900/40" />
+                {/* little arms */}
+                <div className="absolute inset-x-10 bottom-16 flex items-center justify-between">
+                  <div className="h-9 w-5 rounded-[999px] bg-gradient-to-b from-slate-100 to-slate-300 shadow-md shadow-slate-900/50 -rotate-[10deg]" />
+                  <div className="h-9 w-5 rounded-[999px] bg-gradient-to-b from-slate-100 to-slate-300 shadow-md shadow-slate-900/50 rotate-[10deg]" />
+                </div>
+
+                {/* legs */}
+                <div className="absolute bottom-8 flex items-end justify-center gap-6">
+                  <div className="h-9 w-6 rounded-[999px] bg-gradient-to-b from-slate-100 to-slate-300 shadow-md shadow-slate-900/60" />
+                  <div className="h-9 w-6 rounded-[999px] bg-gradient-to-b from-slate-100 to-slate-300 shadow-md shadow-slate-900/60" />
                 </div>
 
                 {/* floor shadow */}
-                <div className="absolute bottom-1 h-3 w-24 rounded-full bg-slate-950/80 blur-md" />
+                <div className="absolute bottom-3 h-4 w-32 rounded-full bg-slate-950/85 blur-md" />
               </div>
 
               <div className="text-center">
@@ -203,24 +211,24 @@ export default function Home() {
                   Your AI marketing buddy
                 </p>
                 <p className="mt-2 text-xs text-slate-400">
-                  Move your mouse around — Wovi&apos;s eyes follow you while
-                  it dreams up posts, ads and ideas that match your brand.
+                  Move your mouse around — Wovi&apos;s eyes follow you while it
+                  dreams up posts, ads and ideas that match your brand.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* WOVO AI SECTION (pricing cards) */}
+        {/* WOVO AI SECTION (pricing) */}
         <section id="ai" className="space-y-6">
           <div className="max-w-2xl">
             <h2 className="text-2xl font-semibold text-white sm:text-3xl">
               Wovo AI: small-business marketing on autopilot.
             </h2>
             <p className="mt-3 text-sm text-slate-300 sm:text-base">
-              Paste your website, menu, or socials and Wovi learns your
-              brand’s voice. Then it writes posts, ads, captions, emails and
-              more — ready for you to copy, tweak, or schedule.
+              Paste your website, menu, or socials and Wovi learns your brand’s
+              voice. Then it writes posts, ads, captions, emails and more —
+              ready for you to copy, tweak, or schedule.
             </p>
           </div>
 
@@ -238,8 +246,8 @@ export default function Home() {
               </p>
               <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
                 <li>• X credits per month to test things out</li>
-                <li>• Social posts, captions & ideas</li>
-                <li>• Works great for restaurants & local shops</li>
+                <li>• Social posts, captions &amp; ideas</li>
+                <li>• Works great for restaurants &amp; local shops</li>
               </ul>
             </div>
 
@@ -274,8 +282,8 @@ export default function Home() {
                 Unlimited credits for heavy users
               </p>
               <p className="mt-2 text-sm text-slate-300">
-                For agencies, creators, and brands that want to go all-in
-                with AI and never worry about usage.
+                For agencies, creators, and brands that want to go all-in with
+                AI and never worry about usage.
               </p>
               <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
                 <li>• Unlimited generations*</li>
@@ -304,10 +312,10 @@ export default function Home() {
               the same hands-on service we use for our Tennessee clients.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              <li>• Daily social posts on Facebook, Instagram & more</li>
-              <li>• Google Business profile updates & review replies</li>
+              <li>• Daily social posts on Facebook, Instagram &amp; more</li>
+              <li>• Google Business profile updates &amp; review replies</li>
               <li>• Website edits, promos, menus, seasonal campaigns</li>
-              <li>• Ideas for events & promotions to drive real traffic</li>
+              <li>• Ideas for events &amp; promotions to drive real traffic</li>
             </ul>
             <p className="mt-4 text-sm font-semibold text-emerald-200">
               Starting around $300/month — month-to-month, no contracts.
@@ -334,7 +342,7 @@ export default function Home() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-300">
               <li>• Ask it for daily post ideas</li>
-              <li>• Generate offers, captions & emails in seconds</li>
+              <li>• Generate offers, captions &amp; emails in seconds</li>
               <li>• Keep everything on-brand for your business</li>
               <li>• Upgrade anytime to unlock more power</li>
             </ul>
